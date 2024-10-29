@@ -4,7 +4,7 @@ Theme Name: Newspaperss
 Theme URI: https://silkthemes.com/newspaperss-pro/
 Author: Silk Themes
 Author URI: https://silkthemes.com/
-Version: 2.49.0
+Version: 2.50.0
 Requires at least: 4.7 
 Tested up to: 6.4
 Requires PHP: 6.0
@@ -2913,13 +2913,20 @@ Social style #1
 .social-btns .btn.facebook .fa {
   color: #3b5998;
 }
+.fa.fa-twitter{
+	font-family:sans-serif;
+}
+.fa.fa-twitter::before{
+	content:"𝕏";
+	font-size:1.2em;
+}
 
 .social-btns .btn.twitter:before {
-  background-color: #3cf;
+  background-color: #000000;
 }
 
 .social-btns .btn.twitter .fa {
-  color: #3cf;
+  color: #000000;
 }
 
 .social-btns .btn.google:before {

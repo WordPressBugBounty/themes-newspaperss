@@ -2,7 +2,7 @@
 Contributors: Silk Themes
 Requires at least: 4.7
 Tested up to:  6.1
-Version: 2.16.0
+Version: 2.50.0
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:   grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments,blog,news,food-and-drink
@@ -66,6 +66,9 @@ Licenses: MIT License
 Source: https://github.com/aristath/kirki
 
 == Changelog ==
+=2.50.0=
+Twitter button fix
+PHP error for 8.2 fix
 =2.35.0=
 slider Auto play fix
 PHP error for 8.2 fix
