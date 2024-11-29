@@ -21,14 +21,12 @@ add_filter('kirki/config', 'newspaperss_kirki_config', 999);
 Kirki::add_panel('newsupgradepro_options', array(
     'priority'    => 10,
     'title'       => esc_attr__('Newspaperss Pro(Upgrade)', 'newspaperss'),
-    'icon' => 'dashicons-arrow-up-alt2'
 
 ));
 
 Kirki::add_panel('upgradepro_options', array(
     'priority'    => 10,
     'title'       => esc_attr__('About Theme', 'newspaperss'),
-    'icon' => 'dashicons-warning'
 
 ));
 

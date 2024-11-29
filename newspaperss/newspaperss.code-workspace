@@ -95,6 +95,12 @@
 		},
 		{
 			"path": "../classic-newspaper"
+		},
+		{
+			"path": "../blogger-newspaper"
+		},
+		{
+			"path": "../news-flash"
 		}
 	]
 }
