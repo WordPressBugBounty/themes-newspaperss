@@ -101,6 +101,9 @@
 		},
 		{
 			"path": "../newspaper-flash"
+		},
+		{
+			"path": "../seo-newspaper"
 		}
 	]
 }
