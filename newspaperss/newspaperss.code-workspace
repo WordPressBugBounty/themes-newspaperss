@@ -104,6 +104,12 @@
 		},
 		{
 			"path": "../seo-newspaper"
+		},
+		{
+			"path": "../extend-newspaper"
+		},
+		{
+			"path": "../z-newspapers"
 		}
 	]
 }
