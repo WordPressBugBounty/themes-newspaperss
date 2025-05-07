@@ -1,22 +1,23 @@
 <?php
+
 /**
-* newspaperss Theme Customizer
-*
-* @package newspaperss
-*/
+ * newspaperss Theme Customizer
+ *
+ * @package newspaperss
+ */
 
 
 /**
-* Add postMessage support for site title and description for the Theme Customizer.
-*
-* @param WP_Customize_Manager $wp_customize Theme Customizer object.
-*/
+ * Add postMessage support for site title and description for the Theme Customizer.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
 
 function newspaperss_customize_register($wp_customize)
 {
     $wp_customize->get_setting('blogname')->transport         = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
-    $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+    $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
 
 
@@ -58,72 +59,68 @@ function newspaperss_customize_register($wp_customize)
         $homesidebar_section->priority = 3;
     }
     if (is_child_theme()) {
-      $ubderswidgetsarea_section = $wp_customize->get_section('sidebar-widgets-sidebar-undersliderwidgets');
-      if (! empty($ubderswidgetsarea_section)) {
-          $ubderswidgetsarea_section->panel = 'homepage_options';
-          $ubderswidgetsarea_section->title   = __('Under slider widgets area', 'newspaperss');
-          $ubderswidgetsarea_section->priority = 2;
-      }
-
+        $ubderswidgetsarea_section = $wp_customize->get_section('sidebar-widgets-sidebar-undersliderwidgets');
+        if (! empty($ubderswidgetsarea_section)) {
+            $ubderswidgetsarea_section->panel = 'homepage_options';
+            $ubderswidgetsarea_section->title   = __('Under slider widgets area', 'newspaperss');
+            $ubderswidgetsarea_section->priority = 2;
+        }
     }
-    if ( isset( $wp_customize->selective_refresh ) ) {
-    $wp_customize->selective_refresh->add_partial( 'logo_position', array(
-         'selector'            => '#main-header',
-         'container_inclusive' => true,
-         'render_callback'     => 'newspaperss_logo_position',
-         'fallback_refresh'    => false, // Prevents refresh loop when document does not contain .cta-wrap selector. This should be fixed in WP 4.7.
-     ) );
-
-
-     }
+    if (isset($wp_customize->selective_refresh)) {
+        $wp_customize->selective_refresh->add_partial('logo_position', array(
+            'selector'            => '#main-header',
+            'container_inclusive' => true,
+            'render_callback'     => 'newspaperss_logo_position',
+            'fallback_refresh'    => false, // Prevents refresh loop when document does not contain .cta-wrap selector. This should be fixed in WP 4.7.
+        ));
+    }
 }
 add_action('customize_register', 'newspaperss_customize_register');
 
 
 /**
-* Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
-*/
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
 function newspaperss_customize_preview_js()
 {
-    wp_enqueue_script('newspaperss_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true);
+    wp_enqueue_script('newspaperss_customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), '20130508', true);
 }
 add_action('customize_preview_init', 'newspaperss_customize_preview_js');
 
 function newspaperss_registers()
 {
     wp_enqueue_style('newspaperss_customizer_style', get_template_directory_uri() . '/css/admin.css', 'newspaperss-style', true);
-    wp_enqueue_script('newspaperss-customizer-js',get_template_directory_uri().'/js/customizer-controls.js', array('customize-controls'), true);
-
+    wp_enqueue_script('newspaperss-customizer-js', get_template_directory_uri() . '/js/customizer-controls.js', array('customize-controls'), true);
 }
 add_action('customize_controls_enqueue_scripts', 'newspaperss_registers');
 
 /**
  * Returns false if Creative Homepage is activated.
  */
-function newspaperss_is_active_homepage() {
+function newspaperss_is_active_homepage()
+{
 
-	if ( 'page' == get_option( 'show_on_front' ) ) {
+    if ('page' == get_option('show_on_front')) {
 
-		$frontpage_id = get_option( 'page_on_front' );
+        $frontpage_id = get_option('page_on_front');
 
-        if ( $frontpage_id  ) {
+        if ($frontpage_id) {
             return true;
         } else {
-			return false;
-		}
-
-	} else {
-		return false;
-	}
-
+            return false;
+        }
+    } else {
+        return false;
+    }
 }
 
-function newspaperss_inactive_creative() {
-	if ( true == newspaperss_is_active_homepage() ) {
-		return false;
-	} else {
-		return true;
-	}
+function newspaperss_inactive_creative()
+{
+    if (true == newspaperss_is_active_homepage()) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 
