@@ -123,8 +123,11 @@ function newspaperss_inactive_creative()
     }
 }
 
-
-
-require get_template_directory() . '/inc/customizer/panels.php';
-require get_template_directory() . '/inc/customizer/sections.php';
-require get_template_directory() . '/inc/customizer/fields.php';
+add_action('init', function () {
+    require_once(get_template_directory() . '/inc/kirki/kirki.php');
+});
+add_action('init', function () {
+    require get_template_directory() . '/inc/customizer/panels.php';
+    require get_template_directory() . '/inc/customizer/sections.php';
+    require get_template_directory() . '/inc/customizer/fields.php';
+});

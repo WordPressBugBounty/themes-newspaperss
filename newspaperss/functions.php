@@ -458,11 +458,3 @@ require_once(get_template_directory() . '/inc/widgets/recent-posts-single.php');
 require_once(get_template_directory() . '/inc/kirki/kirki.php');
 require_once(get_template_directory() . '/inc/customizer.php');
 require_once(get_template_directory() . '/inc/welcome/welcome-screen.php');
-add_action(
-  'doing_it_wrong_run',
-  static function ($function_name) {
-    if ('_load_textdomain_just_in_time' === $function_name) {
-      debug_print_backtrace();
-    }
-  }
-);
