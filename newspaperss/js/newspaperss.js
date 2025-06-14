@@ -164,7 +164,7 @@ jQuery(document).ready(function($) {
       autoplaySpeed: 6000,
       adaptiveHeight: false,
       speed: 600,
-      autoplay: true,
+      autoplay: false,
       prevArrow: '<div  class="newspaperss-slider-nav newspaperss-slider-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
       nextArrow: '<div  class="newspaperss-slider-nav newspaperss-slider-next "><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
       responsive: [{
