@@ -52,9 +52,6 @@
 			"path": "../sk-newspaper"
 		},
 		{
-			"path": "../silk-blogpro"
-		},
-		{
 			"path": "../news-update"
 		},
 		{
@@ -65,9 +62,6 @@
 		},
 		{
 			"path": "../trade-news"
-		},
-		{
-			"path": "../monahdhon-newspaperss-pro"
 		},
 		{
 			"path": "../plus-news"
@@ -110,6 +104,12 @@
 		},
 		{
 			"path": "../z-newspapers"
+		},
+		{
+			"path": "../real-newspapers"
+		},
+		{
+			"path": "../promo-newspaper"
 		}
 	]
 }
